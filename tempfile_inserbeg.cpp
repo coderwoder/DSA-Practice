@@ -5,10 +5,10 @@ class linkedlist
 {
     struct Node
     {
-        int data;   // data | value
-        Node *next; // address of the next node
+        int data;   //          // data | value
+        Node *next; //          // address of the next node
     };
-    Node *begin = NULL; // cur List is empty
+    Node *begin = NULL; //      // cur List is empty
 public:
     void insertbeg(int input)
     {
@@ -19,7 +19,7 @@ public:
             temp->next = begin; // first node ko point karo(connecting new to 1)
         begin = temp;           //        //begin ko point karwake isko first node banado
     }
-    void display() // displaying while you traverse
+    void display() //           // displaying while you traverse
     {
         if (begin == NULL)
             cout << "Empty..." << endl;
