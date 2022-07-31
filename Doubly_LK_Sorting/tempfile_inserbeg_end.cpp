@@ -6,11 +6,12 @@ class linkedlist
 {
     struct node
     {
-        node *next;
+        node *next; // adrs of the next node
         type data;
-        node *prev;
+        node *prev; // adrs of the prev node
     };
-    node *begin = NULL, *end = NULL;
+    node *begin = NULL, // initializing values
+        *end = NULL;    // initializing values
 
 public:
     void insertbeg(type input)
@@ -19,13 +20,13 @@ public:
         temp->next = NULL;
         temp->prev = NULL;
         temp->data = input;
-        if (begin != NULL)
+        if (begin != NULL) // if the list has nodes
         {
-            temp->next = begin;
-            begin->prev = temp;
+            temp->next = begin; // right should point to 1st node
+            begin->prev = temp; // 1st node ka left should point to temp
         }
         else
-            end = temp;
+            end = temp; // if the list doesnt have node make it the 1st n last
         begin = temp;
     }
     void insertend(type input)
@@ -36,12 +37,12 @@ public:
         temp->data = input;
         if (end != NULL)
         {
-            end->next = temp;
-            temp->prev = end;
+            end->next = temp; // last node ka right should point to temp
+            temp->prev = end; // temp ka left should point to last node
         }
         else
-            begin = temp;
-        end = temp;
+            begin = temp; // if the list doesnt have nodes make it the last n 1st
+        end = temp;       // end should point the temp coz it's the last now
     }
 
     void traversebeg()
