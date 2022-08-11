@@ -6,9 +6,9 @@ class linkedlist
 {
     struct node
     {
-        node *next; // adrs of the next node
+        node *next; //  // adrs of the next node
         type data;
-        node *prev; // adrs of the prev node
+        node *prev; //  // adrs of the prev node
     };
     node *begin = NULL, // initializing values
         *end = NULL;    // initializing values
@@ -81,7 +81,7 @@ public:
         type tmp;
         while (ptr1 != NULL)
         {
-            ptr2 = ptr1->next; // ptr2 ko ptr1 ke next node pe lagado
+            ptr2 = ptr1->next; //            // ptr2 ko ptr1 ke next node pe lagado
             while (ptr2 != NULL)
             {
                 if (ptr1->data > ptr2->data) // bubble sorting
