@@ -31,7 +31,7 @@ void ins(int lim, int arr[])
          << "Enter The element you want in to add in your array :" << endl;
     cin >> num;
     cout << "At index? :" << endl;
-    for (i = 0; i < lim; i++)
+    for (i = 0; i <= lim; i++)
         cout << i << "\t";
     cout << endl;
     cin >> index;
